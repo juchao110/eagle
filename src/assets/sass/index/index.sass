@@ -1,0 +1,52 @@
+@import "../common.sass"
+
+.index_page
+    h3
+        font-size: .3rem
+        color: $fontColor
+        text-align: center
+        @include padding_t(1rem)
+        @include padding_b(1rem)
+        background: $whiteColor
+    .all_view
+        text-align: center
+        display: flex
+        flex-direction: row
+        justify-content: center
+        flex-wrap: wrap
+        .all_view_item
+            width: 50%
+            // height: 2rem
+            @include padding_t(.4rem)
+            @include padding_b(.4rem)
+            display: flex
+            flex-direction: column
+            border-right: 1px dashed $borderColor
+            border-bottom: 1px dashed $borderColor
+            background: $whiteColor
+            &:nth-child(2n)
+                border-right: 0
+            i
+                font-size: .6rem
+                @include margin_b(.1rem)
+                &.run
+                    color: $blueColor
+                &.contect
+                    color: $orangeColor
+                &.power
+                    color: $redColor
+                &.temp
+                    color: $greenColor
+            span
+                font-size: .3rem
+                em
+                    font-style: normal
+                    font-weight: bold
+                    &.run
+                        color: $blueColor
+                    &.contect
+                        color: $orangeColor
+                    &.power
+                        color: $redColor
+                    &.temp
+                        color: $greenColor

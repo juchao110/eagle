@@ -1,0 +1,76 @@
+@import "../common.sass"
+
+.monitor_status_page
+    min-height: 100vh
+    @include padding_t(1rem)
+    .mint-loadmore
+        min-height: calc(100vh - 2.8rem)
+    .empty
+        background: #f5f5f5
+        @include padding_t(2rem)
+        text-align: center
+        font-size: .38rem
+    .field_item
+        @include padding_l(.2rem)
+        @include padding_r(.2rem)
+        height: .8rem
+        line-height: .8rem
+        overflow: hidden
+        @include border_b(1px,$borderColor)
+        background: $whiteColor
+        position: relative
+        &.active
+            height: auto
+        .item_name
+            height: .8rem
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            position: relative
+            @include padding_r(.4rem)
+            &>div
+                color: #666
+                font-size: .28rem
+                overflow: hidden
+                &.name
+                    width: 40%
+                &.time
+                    width: 60%
+                span
+                    color: $blueColor
+            i
+                @include transition(transform)
+                color: #ccc
+                font-size: .2rem
+                position: absolute
+                right: 0
+                &.active
+                    @include transform(rotate(180deg))
+        .right_icon
+            position: absolute
+            right: .4rem
+            top: 1.7rem
+            color: #999
+        .item_info
+            &>ul
+                display: flex
+                flex-direction: row
+                flex-wrap: wrap
+                @include padding_l(.2rem)
+                @include padding_r(.2rem)
+                @include border_b(1px,#eee)
+                &:last-child
+                    border-bottom: 0
+                li
+                    width: 50%
+                    color: #999
+                    font-size: .26rem
+                    border-bottom: 1px dashed $borderColor
+                    &:last-child
+                        border-bottom: 0
+                    span
+                        color: $redColor
+                        &.status
+                            color: $greenColor
+                        &.blue
+                            color: $blueColor

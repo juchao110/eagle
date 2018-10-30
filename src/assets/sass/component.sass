@@ -1,0 +1,108 @@
+@import "./common.sass"
+
+/*******common_header start********/
+.common_header
+    width: 100%
+    height: 1rem
+    line-height: 1rem
+    text-align: center
+    font-size: .36rem
+    color: $fontColor
+    position: fixed
+    top: 0
+    left: 0
+    background: $whiteColor
+    @include border_b(1px,$borderColor)
+    z-index: 9
+    .back
+        position: absolute
+        left: .2rem
+
+
+/*******common_header end********/
+
+
+
+/*******left_menu_component start********/
+.left_menu_component
+    width: 3.6rem
+    height: 100vh
+    position: absolute
+    left: 0
+    top: 0
+    background: $whiteColor
+    z-index: 99
+    .router-link-active
+        color: $blueColor
+    .first_level
+        display: flex
+        flex-direction: column
+        &>li
+            display: flex
+            flex-direction: column
+            font-size: .3rem
+            height: 1rem
+            overflow: hidden
+            &.active
+                height: auto
+            &>div
+                height: 1rem
+                line-height: 1rem
+                position: relative
+                @include padding_l(.3rem)
+                @include border_b(1px,$borderColor)
+                i
+                    font-size: .3rem
+                .showLevel
+                    position: absolute
+                    right: .3rem
+                    top: 0
+                    @include transition(transform)
+                    &.active
+                        @include transform(rotate(180deg))
+            .second_level
+                background: #f9f9f9
+                @include padding_l(.8rem)
+                &>li
+                    height: .8rem
+                    line-height: .8rem
+                    font-size: .26rem
+                    @include border_b(1px,#eee)
+                    &:last-child
+                        @include border_b(0,$borderColor)
+/*******left_menu_component end********/
+
+
+/*******search_component start********/
+.search_component
+    height: 1rem
+    line-height: 1rem
+    background: $whiteColor
+    @include padding_l(.2rem)
+    @include padding_r(.2rem)
+    ::-webkit-search-cancel-button
+        display: none
+    &>div
+        display: flex
+        flex-direction: row
+        justify-content: flex-start
+        align-items: center
+        i
+            font-size: .3rem
+            color: #999
+        span
+            font-size: .3rem
+            color: #999
+            @include margin_l(.3rem)
+        input[type=search]
+            width: 6rem
+            height: .5rem
+            line-height: .5rem
+            font-size: .28rem
+            color: $fontColor
+            border: none
+            @include padding_l(.3rem)
+        input[type=submit]
+            opacity: 0
+            position: absolute
+/*******left_menu_component end********/

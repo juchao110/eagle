@@ -1,0 +1,82 @@
+@import "../common.sass"
+
+.alarm_list_page
+    @include padding_t(1.2rem)
+    .mint-loadmore
+        min-height: calc(100vh - 2.2rem)
+    .nav_list
+        height: .8rem
+        line-height: .8rem
+        background: $whiteColor
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        @include margin_b(.2rem)
+        &>div
+            width: 33.33%
+            text-align: center
+            font-size: .26rem
+            &.current
+                @include border_b(.03rem,$blueColor)
+    .alarm
+        &>li
+            background: $whiteColor
+            @include margin_b(.2rem)
+            @include padding_l(.2rem)
+            @include padding_r(.2rem)
+            .alarm_name
+                @include border_b(1px,$borderColor)
+                &>p
+                    height: .6rem
+                    line-height: .6rem
+                    font-size: .28rem
+                    &.name
+                        color: $blueColor
+                    &.status
+                        color: $greenColor
+                    &.stop
+                        color: $redColor
+                    span
+                        color: #666
+            .btn_list
+                height: 1rem
+                display: flex
+                flex-direction: row
+                justify-content: flex-end
+                align-items: center
+                button
+                    width: 1.2rem
+                    height: .6rem
+                    line-height: .6rem
+                    @include margin_l(.2rem)
+                    border: none
+                    @include border_radius(.06rem)
+                    font-size: .26rem
+                    color: $whiteColor
+                    &.start
+                        background: $blueColor
+                    &.stop,&.delete
+                        background: $redColor
+                    &.disabled
+                        background: #ccc
+.alarm_pop_div
+    width: 5rem
+    h3
+        height: 1rem
+        line-height: 1rem
+        font-size: .3rem
+        font-weight: normal
+        text-align: center
+        @include border_b(1px,$borderColor)
+    .operate_div
+        display: flex
+        flex-direction: row
+        &>div
+            width: 50%
+            height: .8rem
+            line-height: .8rem
+            text-align: center
+            font-size: .26rem
+            &:first-child
+                color: $blueColor
+                border-right: 1px solid $borderColor

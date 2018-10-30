@@ -1,0 +1,43 @@
+@import "../common.sass"
+
+.login_page
+    @include padding_t(2rem)
+    @include padding_l(.2rem)
+    @include padding_r(.2rem)
+    h3
+        text-align: center
+        @include margin_b(1rem)
+        img
+            height: .8rem
+    .user_name
+        height: .8rem
+        line-height: .8rem
+        @include margin_b(.2rem)
+        @include border_b(1px,$borderColor)
+        // @include padding_l(.5rem)
+        display: flex
+        justify-content: flex-start
+        flex-direction: row
+        input
+            border: none
+            font-size: .28rem
+            color: $fontColor
+            width: 80%
+        i
+            @include margin_r(.2rem)
+            @include margin_l(.1rem)
+            color: #999
+    .password
+        @extend .user_name
+    .login_btn
+        display: block
+        width: 92%
+        margin: .8rem auto 0
+        height: .8rem
+        line-height: .8rem
+        text-align: center
+        color: $whiteColor
+        font-size: .34rem
+        background: $blueColor
+        border: none
+        @include border_radius(.05rem)
